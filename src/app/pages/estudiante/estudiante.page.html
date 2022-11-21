@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">estudiante</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="vaciar()"  color="primary" routerLink="/inicio">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+
+  <ion-card>
+    <ion-card-title class="espacioTitulo">Registra tu asistencia!</ion-card-title>
+    <ion-card-content>
+      <h2>¡Tu tienes el poder!</h2>
+      <p class="parrafo2" class="ion-text-left">
+       Ahora tu eres el encargado de registrar tu propia asistencia. Sólo presiona el boton "Escanear QR" y ¡LISTO!!! ya puedes escanear el codigo
+       que proyectará tu profesor y se registrara tu asistencia al instante
+
+     </p>
+     <ion-button 
+     type="submit" expand="block" routerLink="/escanear" >
+Escanear QR
+</ion-button>
+    </ion-card-content>
+
+
+  </ion-card>
+  
+<ion-slides mode="ios" pager="ios" scrollbar="ios">
+  <ion-slide>
+    
+    <ion-card >
+      <ion-card-content class="ion-text-left">
+        <h2>19:01 a 20:20</h2>
+        <h2 class="tamaño" >ARQUITECTURA</h2>
+        <h3>ASY4131-009V</h3>
+        <p class="tamaño1" >
+         Profesor:FERNANDO GONZALO HERRERA FRANCESCONI
+        </p>
+        <p class="tamaño1 green" >
+          Sala: MP-PC208_Lab. (30)
+         </p>
+         <p class="green">Sede MAIPÚ</p>
+      </ion-card-content>
+  
+  
+    </ion-card>
+
+  </ion-slide>
+  <ion-slide>
+    <ion-card>
+      <ion-card-content class="ion-text-left">
+        <h2>20:31 a 21:10</h2>
+        <h2 class="tamaño" >ARQUITECTURA</h2>
+        <h3>ASY4131-009V</h3>
+        <p class="tamaño1" >
+         Profesor:FERNANDO GONZALO HERRERA FRANCESCONI
+        </p>
+        <p class="tamaño1" >
+          Sala: MP-PC208_Lab. (30)
+         </p>
+         <p class="green">Sede MAIPÚ</p>
+      </ion-card-content>
+  
+  
+    </ion-card>
+  </ion-slide>
+  <ion-slide>
+    <ion-card>
+      <ion-card-content class="ion-text-left">
+        <h2 class="blue">21:11 a 22:30</h2>
+        <h2 class="tamaño" >PROGRAMACION DE APLICACIONES MÓVILES</h2>
+        <h3>PGY4121-007V</h3>
+        <p class="tamaño1 green" >
+         Profesor:VIVIANA SOLEDAD POBLETE LOPEZ
+        </p>
+        <p class="tamaño1 green" >
+          Sala: MP-PC209_Lab. (30)
+         </p>
+         <p class="green">Sede MAIPÚ</p>
+      </ion-card-content>
+  
+  
+    </ion-card>
+  </ion-slide>
+
+</ion-slides>
+
+</ion-content>

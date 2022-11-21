@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Docente</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="vaciar()" color="primary" routerLink="/inicio">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+>
+
+  <ion-card>
+    <ion-card-title class="espacioTitulo">Codigo de Asistencia</ion-card-title>
+    <ion-card-content>
+      <h2>¡Recuerde siempre activar el Qr cuando comience su Clase!</h2>
+      <ion-list>
+        <ion-item>
+          <ion-select interface="action-sheet" 
+          required
+          placeholder="Seleccione sección"
+          [(ngModel)]="data.seccion">
+
+            <ion-select-option value="PGY2021-009V">PGY2021-009V</ion-select-option>
+            <ion-select-option value="PGY4121-007V">PGY4121-007V</ion-select-option>      
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+          <ion-modal [keepContentsMounted]="true">
+            <ng-template>
+              <ion-datetime id="datetime" 
+                            presentation="date" 
+                            (ionChange)=" cambioFecha( $event )" >
+              </ion-datetime>
+            </ng-template>
+          </ion-modal>
+        </ion-item>
+
+        
+      </ion-list>
+  <ion-button 
+      expand="block" 
+      class="ion-margin" 
+      (click)="generaScan()">
+      Generate QR Code  
+  </ion-button>
+  <qrcode 
+  [qrdata]="qrCodeString" 
+  [width]="256" 
+  [errorCorrectionLevel]="'M'">
+</qrcode>
+  
+
+
+    </ion-card-content>
+
+
+  </ion-card>
+  
+  <ion-slides mode="ios" pager="ios" scrollbar="ios">
+    <ion-slide>
+      <ion-card>
+        <ion-card-content class="ion-text-left">
+          <h2 class="blue">19:01 a 20:20</h2>
+          <h2 class="tamaño" >PROGRAMACION DE WEB</h2>
+          <h3>PGY2021-009V</h3>
+          <p class="tamaño1 green" >
+            Sala: MP-PC209_Lab. (30)
+           </p>
+           <p class="green">Sede MAIPÚ</p>
+        </ion-card-content>
+    
+    
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-card-content class="ion-text-left">
+          <h2 class="blue">20:31 a 21:10</h2>
+          <h2 class="tamaño" >PROGRAMACION DE WEB</h2>
+          <h3>PGY4121-007V</h3>
+          <p class="tamaño1 green" >
+            Sala: MP-PC209_Lab. (30)
+           </p>
+           <p class="green">Sede MAIPÚ</p>
+        </ion-card-content>
+    
+    
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-card-content class="ion-text-left">
+          <h2 class="blue">21:11 a 22:30</h2>
+          <h2 class="tamaño" >PROGRAMACION DE APLICACIONES MÓVILES</h2>
+          <h3>PGY4121-007V</h3>
+          <p class="tamaño1 green" >
+            Sala: MP-PC208_Lab. (30)
+           </p>
+           <p class="green">Sede MAIPÚ</p>
+        </ion-card-content>
+    
+    
+      </ion-card>
+    </ion-slide>
+  
+  </ion-slides>
+</ion-content>

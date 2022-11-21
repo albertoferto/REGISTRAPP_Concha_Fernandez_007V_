@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>validar</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+
+    <div class="espacioTitulo">
+      <img src="/assets/img/Logo_rapp.png" class="espacioTitulo">
+    </div>
+    <ion-label>Ingrese código: </ion-label>
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="2" >
+      <ion-input type="password"
+      name="1" value="" 
+      class="bordes"maxlength=1 
+      required>
+  </ion-input>
+    </ion-col>
+    <ion-col size="2"> 
+      <ion-input type="password"
+      name="2" value=""
+      class="bordes" maxlength=1 
+      required>
+    </ion-input>
+    </ion-col>
+    <ion-col size="2"> 
+      <ion-input type="password"
+      name="3" value="" 
+      class="bordes" maxlength=1 
+      required>
+    </ion-input>
+    </ion-col>
+    <ion-col size="2"> 
+      <ion-input type="password"
+      name="4" value="" 
+      class="bordes" maxlength=1 
+      required>
+    </ion-input>
+    </ion-col>
+    <ion-col size="2"> 
+      <ion-input type="password"
+      name="5" value="" 
+      class="bordes" maxlength=1 
+      required>
+    </ion-input>
+    </ion-col>
+    <ion-col size="2"> 
+      <ion-input type="password"
+      name="6" value="" [(ngModel)]= "usuario.password"
+      class="bordes" maxlength=1 
+      required> 
+    </ion-input>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+    <div class="espacioBoton">
+      <ion-button [disabled] ="formulario.invalid"
+              type="submit" expand="block" routerLink="/contrasena" >
+        Verificar
+      </ion-button>
+    </div>
+
+  </form>
+
+</ion-content>

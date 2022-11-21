@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+          text="Back"
+          color="primary"
+          mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Alert</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <!-- Default -->
+    <ion-button>Default</ion-button> <br>
+
+    <!-- Anchor -->
+    <ion-button href="http://www.google.cl" target="_blank">Google</ion-button>
+    <br>
+
+    <!-- Colors -->
+    <ion-button color="primary">Primary</ion-button>
+    <ion-button color="secondary">Secondary</ion-button>
+    <ion-button color="tertiary">Tertiary</ion-button>
+    <ion-button color="success">Success</ion-button>
+    <ion-button color="warning">Warning</ion-button>
+    <ion-button color="danger">Danger</ion-button>
+    <ion-button color="light">Light</ion-button>
+    <ion-button color="medium">Medium</ion-button>
+    <ion-button color="dark">Dark</ion-button>
+
+    <br>
+
+    <!-- Expand -->
+    <ion-button expand="full" color="success">Full Button</ion-button>
+    <ion-button expand="block" color="medium">Block Button</ion-button>
+
+    <br>
+
+    <ion-button shape="round" color="success" expand="full">Round Button</ion-button>
+    
+    <!-- Fill -->
+    <ion-button expand="full" fill="outline">Outline + Full</ion-button>
+    <ion-button expand="block" fill="outline">Outline + Block</ion-button>
+    <ion-button shape="round" fill="outline">Outline + Round</ion-button>
+    
+    <br>
+
+    <!-- Icons -->
+      <ion-button>
+        <ion-icon slot="start" name="star"></ion-icon>
+        Left Icon
+      </ion-button>
+
+      <ion-button>
+        Right Icon
+        <ion-icon slot="end" name="star"></ion-icon>
+      </ion-button>
+
+      <ion-button>
+        <ion-icon slot="icon-only" name="star"></ion-icon>
+      </ion-button>
+
+      <br>
+      <!-- Sizes -->
+      <ion-button size="large">Large</ion-button>
+      <ion-button>Default</ion-button>
+      <ion-button size="small">Small</ion-button>
+
+      <br>
+      <ion-button (click)="presentAlertPrompt()" expand="block" color="success" shape="round">
+        Ingresando Datos
+      </ion-button>
+
+
+      <!--insertar un segundo botón que llame a un método del alert -->
+      
+        
+
+</ion-content>

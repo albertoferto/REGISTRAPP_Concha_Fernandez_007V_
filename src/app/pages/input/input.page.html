@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+     <ion-buttons slot="start">
+       <ion-back-button 
+          defaultHref="/"
+          text="Back"
+          color="primary"
+          mode="ios"></ion-back-button>
+     </ion-buttons>
+     <ion-title>Input</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item>
+      <ion-label>Digite una palabra: </ion-label>
+      <ion-input type="text" placeholder="Enter Input"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Digite un nombre: </ion-label>
+      <ion-input type="text" clearInput value="clear me"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Ingrese un numero </ion-label>
+      <ion-input type="number" value="333"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Ingrese una palabra: </ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Stacked Label</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Género</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="f">Mujer</ion-select-option>
+        <ion-select-option value="m">Hombre</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+
+    <ion-list-header>
+      <ion-label>Formulario Válido: {{formulario.valid}} </ion-label>
+    </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Email: </ion-label>
+        <ion-input type="email" placeholder="Email"
+                  name="email" [(ngModel)]= "usuario.email"
+                  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                  required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Password: </ion-label>
+        <ion-input type="password" placeholder="Contraseña"
+                   name="password" [(ngModel)]= "usuario.password"
+                   required>
+        </ion-input>
+      </ion-item>
+      <ion-button [disabled] ="formulario.invalid"
+        type="submit" expand="block" routerLink="/inicio">
+      Enviar Datos
+    </ion-button>
+  </form>
+</ion-content>

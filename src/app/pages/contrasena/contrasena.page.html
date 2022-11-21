@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+
+    <div class="espacioTitulo">
+      <img src="/assets/img/Logo_rapp.png" class="espacioTitulo">
+    </div>
+    <ion-label>Crea nueva contraseña: </ion-label>
+     <ion-item class="espacioInput" >
+      
+      <ion-input type="password" placeholder="Contraseña"
+                 name="password" value="" 
+                 minlength=8
+                 required>
+      </ion-input>
+    </ion-item>
+    <ion-label>Reingresa Contraseña: </ion-label>
+    <ion-item class="espacioInput" >
+      
+      <ion-input type="password" placeholder="Contraseña"
+                 name="password2" [(ngModel)]= "usuario.password"
+                 minlength=8
+                 required>
+      </ion-input>
+    </ion-item>
+    <div class="espacioBoton">
+    <ion-button [disabled] ="formulario.invalid"
+            type="submit" expand="block" routerLink="/contra-cambiada" >
+      Guardar
+    </ion-button>
+    </div>
+
+  </form>
+</ion-content>
+
+

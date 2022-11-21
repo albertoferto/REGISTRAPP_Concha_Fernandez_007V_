@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registro</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="height: 500px">
+  <form [formGroup] = "formularioRegistro" >
+    <div  class="paddingRapp">
+      <img src="/assets/img/Logo_rapp.png" class="espacioTitulo">
+    </div>
+
+    <div class="paddingRapp">
+      <ion-label>Nombres:
+      </ion-label>
+    <ion-item>
+      <ion-input placeholder="Ingrese su(s) nombre(s)"
+      type="text" 
+      formControlName="nombres"></ion-input>
+    </ion-item>
+    <ion-label>Apellidos:
+    </ion-label>
+  <ion-item>
+    <ion-input placeholder="Ingrese su(s) apellido(s)"
+    type="text"  formControlName="apellidos"></ion-input>
+  </ion-item>
+  <ion-label>Telefono:
+  </ion-label>
+<ion-item>
+  <ion-input 
+  type="text" placeholder="9 1234 5678"
+  formControlName="telefono"></ion-input>
+</ion-item>
+<ion-label>Correo: </ion-label>
+  <ion-item>
+    <ion-input type="email" placeholder="ejemplo@duocuc.cl"
+              name="email" formControlName="correo"
+              >
+    </ion-input>
+  
+    </ion-item>
+    <ion-label>Contraseña: </ion-label>
+    <ion-item>
+      <ion-input type="password" placeholder="Contraseña"
+                name="password" formControlName="contraseña">
+      </ion-input>
+    </ion-item>
+    <ion-label>Confirmar contraseña: </ion-label>
+    <ion-item>
+      <ion-input type="password" placeholder="Reingrese Contraseña"
+                name="password" formControlName="confirmarContraseña">
+      </ion-input>
+    </ion-item>
+    </div>
+    </form>
+
+
+
+
+    <div class="espacioBoton">
+    <ion-button  (click)="CrearUsuario()" >
+      Registrar
+    </ion-button>
+
+
+    </div>
+
+    <div class="espacioBoton">
+      <ion-button  [routerLink] = "['/inicio']">
+        volver
+
+      </ion-button>
+  
+  
+      </div>
+    
+</ion-content>

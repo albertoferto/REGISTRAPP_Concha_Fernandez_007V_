@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>reestablecer</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+
+    <div class="espacioTitulo">
+      <img src="/assets/img/Logo_rapp.png" class="espacioTitulo">
+    </div>
+
+
+      <ion-label>Ingrese N° Telefónico o E-mail:: </ion-label>
+    <ion-item class="espacioInput">
+      <ion-input placeholder="ejemplo@duocuc.cl +56 9 1234 56789"
+                 name="contacto" value="" minlength=9>
+      </ion-input>
+    </ion-item>
+      <div class="espacioTitulo">
+        <ion-label >Te enviaremos un sms o un correo electronico con el código para verificar tu identidad.
+        </ion-label>
+      </div>
+
+    <div class="espacioBoton">
+      <ion-button [disabled] ="formulario.invalid"
+              type="submit" expand="block" routerLink="/validar" >
+        Recibir código
+      </ion-button>
+    </div>
+
+  </form>
+
+</ion-content>

@@ -1,0 +1,21 @@
+.tamaño{
+    text-size-adjust: 3px;
+    color: darkblue ;
+}
+.tamaño1{
+    text-size-adjust: 0.3px;
+    color:darkslategrey ;
+}
+.blue{
+    color: darkblue;
+}
+.green{
+    color: darkslategrey;
+}
+ion-content.fondo{
+    --background: url(../img/fondo.png) 0 0/100% 100% no-repeat;
+}
+.borde{
+    border-left: 5px ;
+    border-color: blue;
+}
