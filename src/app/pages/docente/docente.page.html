@@ -15,7 +15,7 @@
 </ion-header>
 
 <ion-content class="fondo">
->
+
 
   <ion-card>
     <ion-card-title class="espacioTitulo">Codigo de Asistencia</ion-card-title>
@@ -44,8 +44,6 @@
             </ng-template>
           </ion-modal>
         </ion-item>
-
-        
       </ion-list>
   <ion-button 
       expand="block" 
@@ -53,11 +51,13 @@
       (click)="generaScan()">
       Generate QR Code  
   </ion-button>
-  <qrcode 
+<qrcode 
   [qrdata]="qrCodeString" 
-  [width]="256" 
+  [width]="150" 
   [errorCorrectionLevel]="'M'">
 </qrcode>
+
+ 
   
 
 

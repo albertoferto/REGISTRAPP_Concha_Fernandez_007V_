@@ -2,6 +2,7 @@ import { Component, OnInit,} from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-docente',
   templateUrl: './docente.page.html',
@@ -51,7 +52,8 @@ export class DocentePage implements OnInit {
 
   generaScan(){
     this.qrCodeString= this.data.seccion+'_'+ this.fecha.toString()
-    console.log(this.qrCodeString)
+    
+    console.log(this.qrCodeString) 
   }
 
   verScan(){
